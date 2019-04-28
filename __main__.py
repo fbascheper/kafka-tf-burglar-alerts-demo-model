@@ -1,0 +1,3 @@
+from tflearn import train_model_using_transfer_learning
+
+train_model_using_transfer_learning()
