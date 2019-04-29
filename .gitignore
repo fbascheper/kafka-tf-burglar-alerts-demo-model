@@ -93,6 +93,7 @@ ENV/
 
 
 # TensorFlow models
+saved_fine_tuned_model*.*
 *.h5
 *.pb
 *.pbtxt
