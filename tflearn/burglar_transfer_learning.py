@@ -118,7 +118,7 @@ def train_model_using_transfer_learning():
     #
     # Train the model
     #
-    epochs = 2
+    epochs = 25
     steps_per_epoch = train_generator.n // batch_size
     validation_steps = validation_generator.n // batch_size
 
