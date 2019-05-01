@@ -10,7 +10,7 @@ import tensorflow as tf
 from tensorflow.python.keras.layers import Dense, Dropout, GlobalAveragePooling2D
 from tensorflow.python.keras.preprocessing.image import ImageDataGenerator
 
-from .util.helpers import plot_results, freeze_session, create_logger, log_tf_model_nodes
+from .util.helpers import plot_results, freeze_session, create_logger, log_tf_model_nodes, count_files_in_dir
 
 
 def train_model_using_transfer_learning():
@@ -38,9 +38,9 @@ def train_model_using_transfer_learning():
 
     logger.info('Using TensorFlow {} and Keras {}'.format(tf.VERSION, tf.keras.__version__))
     logger.info('Total training / validation BURGLAR images = {} / {}'.
-                format(len(os.listdir(train_burglars_dir)), len(os.listdir(validation_burglars_dir))))
+                format(count_files_in_dir(train_burglars_dir), count_files_in_dir(validation_burglars_dir)))
     logger.info('Total training / validation NOT-BURGLAR images = {} / {}'.
-                format(len(os.listdir(train_no_burglars_dir)), len(os.listdir(validation_no_burglars_dir))))
+                format(count_files_in_dir(train_no_burglars_dir), count_files_in_dir(validation_no_burglars_dir)))
 
     #
     # Create Image Data Generator with Image Augmentation

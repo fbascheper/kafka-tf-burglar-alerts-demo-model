@@ -1,4 +1,5 @@
 import logging
+import os
 
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -27,6 +28,15 @@ def create_logger():
     logger.info('Logger initialised')
 
     return logger
+
+
+def count_files_in_dir(directory):
+    """
+    Count the number of files in a directory and its subdirectories
+    :param directory: directory to count files of
+    :return: number of files
+    """
+    return sum([len(files) for r, d, files in os.walk(directory)])
 
 
 def log_tf_model_nodes(logger, node_type, model_nodes):
