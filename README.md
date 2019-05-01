@@ -5,8 +5,8 @@
 ***
 
 ### Introduction
-This repository contains the code used to build a TensorFlow for Java model for the 
-Kafka burglar alerts application. It makes use of 'transfer learning', i.e. it
+This repository contains the code used to build a `TensorFlow for Java` model for the 
+[Kafka burglar alerts application](https://github.com/fbascheper/kafka-tf-burglar-alerts-demo). It makes use of 'transfer learning', i.e. it
 reuses a [previously trained model](https://github.com/keras-team/keras-applications/blob/master/keras_applications/mobilenet_v2.py) 
 (Keras Mobilenet V2) and re-trains the last set of layers to distinguish burglars
 from non burglars.
